@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapActivity">
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:minWidth="32dp"
+        android:minHeight="48dp"
+        android:text="Back"
+        android:onClick="returnHome"
+        android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+        android:drawableTint="@color/light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="310dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_centerInParent="true"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/zoomIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="60dp"
+        android:height="60dp"
+        android:onClick="zoomIn"
+        android:textSize="20dp"
+        android:text=" + "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_zoom_in_24"
+        android:layout_marginEnd="16dp"
+        app:tint="@color/black"
+        android:layout_marginTop="300dp"
+        />
+
+    <ImageButton
+        android:id="@+id/zoomOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="60dp"
+        android:height="60dp"
+        android:onClick="zoomOut"
+        app:srcCompat="@drawable/ic_baseline_zoom_out_24"
+        app:tint="@color/black"
+        android:text=" - "
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="340dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
